@@ -1,7 +1,13 @@
 App-ZofCMS-Plugin-ConfigToTemplate
 
+The module is a plugin for L<App::ZofCMS> that technically expands functionality of
+Main Config File's C<template_defaults> special key.
 
+Using this plugin you can dynamically (and more "on demand") stuff keys from Main Config File
+to ZofCMS Template hashref without messing around with other plugins and poking with
+->conf method
 
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 INSTALLATION
 

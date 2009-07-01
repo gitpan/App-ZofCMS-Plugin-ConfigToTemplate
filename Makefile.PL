@@ -5,6 +5,7 @@ WriteMakefile
           'NAME' => 'App::ZofCMS::Plugin::ConfigToTemplate',
           'VERSION_FROM' => 'lib/App/ZofCMS/Plugin/ConfigToTemplate.pm',
           'PREREQ_PM' => {
+                           'App::ZofCMS::Plugin::Base' => '0.0103',
                            'Test::More' => 0
                          },
           'INSTALLDIRS' => 'site',

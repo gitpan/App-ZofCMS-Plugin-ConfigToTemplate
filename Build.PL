@@ -14,6 +14,7 @@ my $builder = Module::Build->new(
         'App::ZofCMS::Test::Plugin' => '0.0104',
     },
     requires => {
+        'App::ZofCMS::Plugin::Base' => 0.0103,
     },
     add_to_cleanup      => [ 'App-ZofCMS-Plugin-ConfigToTemplate-*' ],
     create_makefile_pl => 'traditional',
