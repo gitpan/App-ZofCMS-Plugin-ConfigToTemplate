@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::ConfigToTemplate;
 use warnings;
 use strict;
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 
 use base 'App::ZofCMS::Plugin::Base';
 
@@ -102,8 +102,23 @@ You need to include the plugin in the list of plugins to run.
         noop         => 0,
     }
 
-The C<plug_config_to_template> must be present in order for the plugin to run. It takes a
-hashref as a value. Keys of this hashref can be set in either (or both) Main Config File and
+    plug_config_to_template => sub {
+        my ( $t, $q, $config ) = @_;
+        return {
+            cell         => 'd',
+            key          => 'public_config',
+            config_cell  => 'public_config',
+            config_keys  => undef,
+            noop         => 0,
+        };
+    }
+
+The C<plug_config_to_template> must be present in order for the plugin to run. It takesa
+hashref or a subref as a value. If subref is specified,
+its return value will be assigned to C<plug_config_to_template> as if it was already there. If sub returns
+an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
+contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
+L<App::ZofCMS::Config> object. Keys of this hashref can be set in either (or both) Main Config File and
 ZofCMS Template - they will be merged together if set in both files; if the same key is set in
 both files, the value set in ZofCMS Template will take precedence. All keys are optional, to
 run the plugins with all the defaults use an empty hashref. Possible keys/values
