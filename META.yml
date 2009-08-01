@@ -1,6 +1,6 @@
 ---
 name: App-ZofCMS-Plugin-ConfigToTemplate
-version: 0.0103
+version: 0.0104
 author:
   - "'Zoffix <'zoffix@cpan.org'>"
 abstract: plugin to dynamically stuff Main Config File keys into ZofCMS Template
@@ -16,7 +16,7 @@ configure_requires:
 provides:
   App::ZofCMS::Plugin::ConfigToTemplate:
     file: lib/App/ZofCMS/Plugin/ConfigToTemplate.pm
-    version: 0.0103
+    version: 0.0104
 generated_by: Module::Build version 0.34
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html

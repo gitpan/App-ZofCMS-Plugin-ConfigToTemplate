@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::ConfigToTemplate;
 use warnings;
 use strict;
 
-our $VERSION = '0.0103';
+our $VERSION = '0.0104';
 
 use base 'App::ZofCMS::Plugin::Base';
 
